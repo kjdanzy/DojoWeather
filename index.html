@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="container">
+        <h1>DojoWeather</h1>
+        <div class="">
+            <a href="#" onclick="showAlert()">Burbank</a>
+            <a href="#" onclick="showAlert()">Chicago</a>
+            <a href="#" onclick="showAlert()">Dallas</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h3>San Jose</h3>
+        <div class="sanJoseTempFlex">
+            <p>show temperature in </p>
+            <select name="selTemp" id="selTemp" onchange="showTemperatures(this.value);">
+                <option value="C">&deg;C</option>
+                <option value="F">&deg;F</option>
+            </select>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div id="daysInfo" class="flexCol">
+
+        <div id="today" class="dailyDecor "> 
+            <div class="dayHeader" >Today</div>
+            <div><img class="imgRegular" src="./images/some_rain.png" alt="image of some rain"></div>
+            <h6>some rain</h6>
+            <div class="temps">
+                <div class="high">23.9&deg;</div>
+                <div class="low">18.3&deg;</div>
+            </div>
+        </div>
+        <div id="tomorrow" class="dailyDecor">
+            <div class="dayHeader">Tomorrow</div>
+            <div><img class="imgRegular" src="./images/some_sun.png" alt="image of some sun"></div>
+            <h6>some sun</h6>
+            <div class="temps">
+                <div class="high">23.9&deg;</div>
+                <div class="low">18.3&deg;</div>
+            </div>
+        </div>
+        <div id="friday" class="dailyDecor">
+            <div class="dayHeader">Friday</div>
+            <div><img class="imgRegular" src="./images/some_clouds.png" alt="image of some clouds"></div>
+            <h6>some rain</h6>
+            <div class="temps">
+                <div class="high">23.9&deg;</div>
+                <div class="low">18.3&deg;</div>
+            </div>
+        </div>
+        <div id="saturday" class="dailyDecor">
+            <div class="dayHeader">Saturday</div>
+            <div><img class="imgRegular" src="./images/some_sun.png" alt="image of some sun"></div>
+            <h6>some rain</h6>
+            <div class="temps">
+                <div class="high">23.9&deg;</div>
+                <div class="low">18.3&deg;</div>
+            </div>
+        </div>
+
+    </div>
+    <div id="cookieMessage" class="container cookieTime fixedPosition">
+        <img src="./images/cookie.png" alt="Picture of a cookie">
+        
+        <div id="cookieTimeMessage" >
+            <h4>Stop!  Cookie time.</h4>
+            <p>We use cookies (sadly not the edible ones) to analyze our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <button onclick="hideCookieMessage()">I Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
